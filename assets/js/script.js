@@ -12,6 +12,11 @@ function generaGriglia() {
             const numeroCella = (i - 1) * 10 + j;
             cella.textContent = numeroCella;
             riga.appendChild(cella);
+
+            cella.addEventListener("click", function () {
+                this.style.background = 'lightblue'
+                console.log(`hai cliccato la cella numero ${numeroCella}`)
+            })
         }
 
         grigliaDiv.appendChild(riga);
